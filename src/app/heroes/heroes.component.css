@@ -1,0 +1,12 @@
+.heroes {
+    list-style: none;
+    color: brown;
+}
+
+.badge {
+    color: red;
+}
+
+.hot {
+    font-weight: 600;
+}

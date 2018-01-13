@@ -1,0 +1,25 @@
+<div style="text-align:center">
+
+  <div *ngIf="selectedHero">
+    <h2>{{ selectedHero.name | uppercase }} Details</h2>
+    <div><span class="hot">id: </span> {{selectedHero.id}} </div>
+    
+    <div>
+        <label class="hot">name:
+          <input placeholder="name">
+        </label>
+    </div>
+
+      <div style="display: inline-block;">
+        <button (click)="save()">{{ "save" | uppercase }}</button>
+        <button (click)="onSelect()">{{ "close" | uppercase }}</button>
+      </div>
+  </div>
+
+  <h2>My heroes</h2>
+  <ul class="heroes">
+    <li *ngFor="let hero of heroes" (click)="onSelect(hero)">
+      <span class="badge hot">{{ hero.id }}</span> <span>{{ hero.name }}</span>
+    </li>
+  </ul>
+</div>
